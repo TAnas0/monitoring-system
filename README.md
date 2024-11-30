@@ -1,5 +1,7 @@
 # Monitoring system
 
+![Grafana Dashboard](dashboard.png)
+
 > System to monitor Linux server metrics, including CPU, memory, and disk usage.
 
 - Collect Linux system metrics using Python scripts or [Telegraf](https://docs.influxdata.com/telegraf/v1/).
