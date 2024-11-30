@@ -41,6 +41,22 @@ services:
       - timescaledb
     restart: always
 
+  telegraf:
+    image: telegraf:1.32.3
+    container_name: telegraf
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ./telegraf-apt.sh:/etc/telegraf/telegraf-apt.sh
+      - ./99telegraf:/etc/apt/apt.conf.d/99telegraf
+    network_mode: host
+    restart: unless-stopped
+    group_add:
+      # TODO customize
+      - 991  # Adding telegraf user to docker group
+
 volumes:
   pgadmin_data:
   timescaledb_data:
