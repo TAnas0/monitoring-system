@@ -21,9 +21,9 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
-## System metrics
+<!-- ## System metrics
 
-For an extensive list of interesting system metrics, please see [docs/metrics.md](docs/metrics.md).
+For an extensive list of interesting system metrics, please see [docs/metrics.md](docs/metrics.md). -->
 
 <!-- TODO add a short list of the one implemented -->
 ## Stack
